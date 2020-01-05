@@ -42,7 +42,7 @@ extension LinkedList {
         switch self {
         case .end:
             return .node(item, .end)
-        case let .node(oldItem, currentList):
+        case .node(_, _):
             return .node(item, self)
         }
     }

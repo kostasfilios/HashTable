@@ -21,7 +21,7 @@ public struct HashTable<Key: Hashable, Value> {
     
     init(estCapacity: Int) {
         capacity = estCapacity
-        for i in 0...capacity {
+        for _ in 0...capacity {
             buckets.append(nil)
         }
     }

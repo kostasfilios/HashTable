@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct HashTable<Key: Hashable, Value> {
+struct HashTable<Key: Hashable, Value> {
     private typealias Item = (key: Key, value: Value)
     private typealias Element = (key: Key, linkedList: LinkedList<Item>)
     private var buckets = ContiguousArray<Element?>()

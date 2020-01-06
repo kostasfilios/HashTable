@@ -26,7 +26,6 @@ struct HashTable<Key: Hashable, Value> {
         }
     }
     
-    // 1
     public subscript(key: Key) -> Value? {
         mutating get {
             return value(for: key)
@@ -39,7 +38,6 @@ struct HashTable<Key: Hashable, Value> {
         }
     }
     
-    // 2
     private mutating func value(for key: Key) -> Value? {
         let index = self.index(for: key)
         guard index < buckets.endIndex else {
